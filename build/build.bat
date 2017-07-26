@@ -1,0 +1,6 @@
+@ECHO OFF
+
+@echo Compiling TypeScript...
+cmd /c tsc ../src/tokenizer.ts ../src/bbCodeParseTree.ts ../src/bbTag.ts ../src/bbCodeParser.ts
+@echo Minifying...
+cmd /c uglifyjs ../src/tokenizer.js ../src/bbCodeParseTree.js ../src/bbTag.js ../src/bbCodeParser.js --output bbCodeParser.min.js
